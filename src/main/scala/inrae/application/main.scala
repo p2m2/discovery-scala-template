@@ -40,7 +40,7 @@ object Main {
           .isSubjectOf(URI("https://metabohub.peakforest.org/ontology/property#curation_message"), "message")
           .isSubjectOf(URI("label","rdfs"), "labelMessage")
           .filter.contains("supprimer")
-          .console() // afiche des informations de debug , on peut jouer sur logLevel dans settings aussi : trace, debug, warn, err, off
+          .console // afiche des informations de debug , on peut jouer sur logLevel dans settings aussi : trace, debug, warn, err, off
           .select(List("compound", "labelMessage"),10)
           .commit()
           .raw
