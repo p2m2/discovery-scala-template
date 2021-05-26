@@ -2,7 +2,6 @@ package inrae.application
 
 import inrae.semantic_web.rdf.URI
 import inrae.semantic_web.{SWDiscovery, StatementConfiguration}
-import org.apache.logging.log4j.LogManager
 
 import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, ExecutionContext}
@@ -10,9 +9,6 @@ import scala.concurrent.{Await, ExecutionContext}
 object Main {
 
   implicit val ec = ExecutionContext.global
-
-  val logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME)
-
   val config: StatementConfiguration = StatementConfiguration.setConfigString(
     """
       {
