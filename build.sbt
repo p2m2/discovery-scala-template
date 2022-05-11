@@ -1,9 +1,14 @@
 name := "discovery-scala-executable-example"
 version := "0.1"
-scalaVersion := "2.13.4"
+scalaVersion := "2.13.8"
 
-mainClass in Compile := Some("inrae.application.Main")
+Compile / mainClass := Some("inrae.application.Main")
 
-libraryDependencies += "com.github.p2m2" %% "discovery" % "0.2.0"
+libraryDependencies ++= Seq(
+      "com.github.p2m2" %% "discovery" % "0.3.2d",
+      "org.eclipse.rdf4j" % "rdf4j-sail" % "4.0.0",
+      "org.eclipse.rdf4j" % "rdf4j-storage" % "4.0.0",
+      "org.eclipse.rdf4j" % "rdf4j-tools-federation" % "4.0.0"  
+      )
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
